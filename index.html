@@ -1,13 +1,72 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="overflow-x-hidden">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>sirat-un-nabi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>The Sealed Nectar | Ar-Raheeq Al-Makhtum</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Amiri:ital,wght@0,400;0,700;1,400&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+              serif: ['Cinzel', 'serif'],
+              arabic: ['Amiri', 'serif'],
+              urdu: ['"Noto Nastaliq Urdu"', 'serif'],
+            },
+            colors: {
+              deepGreen: '#061A14',
+              surfaceGreen: '#0A251C',
+              cardGreen: '#0E2E23',
+              borderGreen: '#184737',
+              goldPrimary: '#D4AF37',
+              goldLight: '#F3E5AB',
+              goldDark: '#997F24',
+              creamText: '#F7F4EA',
+              mutedEmerald: '#8BA99B',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      *, *::before, *::after {
+        box-sizing: border-box;
+      }
+      html, body {
+        width: 100%;
+        max-width: 100vw;
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+        background-color: #061A14;
+        color: #F7F4EA;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        -webkit-tap-highlight-color: transparent;
+      }
+      .islamic-pattern {
+        background-color: #061A14;
+        background-image: radial-gradient(#D4AF37 0.65px, transparent 0.65px), radial-gradient(#184737 0.65px, #061A14 0.65px);
+        background-size: 28px 28px;
+        background-position: 0 0, 14px 14px;
+      }
+      input[type=range]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        height: 14px;
+        width: 14px;
+        border-radius: 50%;
+        background: #D4AF37;
+        box-shadow: 0 0 10px rgba(212, 175, 55, 0.85);
+        cursor: pointer;
+      }
+    </style>
   </head>
-  <body>
-    <div id="root"></div>
+  <body class="islamic-pattern min-h-screen">
+    <div id="root" class="w-full max-w-full overflow-x-hidden"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
